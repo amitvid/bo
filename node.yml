@@ -1,0 +1,9 @@
+---
+ - hosts: all
+   tasks:
+    - name: install APT repo
+      apt: 
+       name: python-software-properties
+       update_cache: yes
+    - name: Install the node repo
+      shell: 'curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -'
